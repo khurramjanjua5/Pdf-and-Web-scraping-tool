@@ -19,26 +19,33 @@ Ensure you have the following dependencies installed:
 
 1. Clone the repository to your local machine:
 
-```bash
 git clone https://github.com/your-username/pdf-and-web-scraping.git
 
 ## Usage
 Navigate to the project directory:
 cd pdf-and-web-scraping
 
-Start the Flask server:
+## Start the Flask server:
 python app.py
 
-Access the API endpoints:
+## Access the API endpoints:
 Store data: POST /store_data
 Download Excel file: GET /download_excel
 
-API Endpoints
-POST /store_data: Upload a PDF file and provide a URL for web scraping. The data will be stored in the database.
-GET /download_excel: Download the stored data in Excel format.
-Contributing
-If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
+## API Documentation
+Endpoint: /store_data
+Method: POST
+Description: This endpoint allows users to upload a PDF file and provide a URL for web scraping. The data will be extracted from the PDF file and the provided URL, transformed, and stored in the database.
 
+Request Body:
 
+pdf_path (string): Path to the PDF file to be uploaded.
+url (string): URL for web scraping additional information.
+Response:
+
+Success (200 OK):
+Message: "Data stored successfully."
+Failure (500 Internal Server Error):
+Error: "Failed to store data in the database."
 
 
